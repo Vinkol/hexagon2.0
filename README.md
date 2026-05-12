@@ -36,7 +36,7 @@
 
 1. Клонируй репозиторий:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Vinkol/hexagon2.0
    ```
 2. Установи зависимости:
    ```bash
