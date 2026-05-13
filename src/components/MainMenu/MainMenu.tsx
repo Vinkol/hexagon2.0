@@ -34,7 +34,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({
             onChange={(e) => setNameInput(e.target.value)}
             className="name-input"
           />
-          <button type="submit" className="btn-start">
+          <button type="submit" className="btn-start" style={{ marginTop: '20px' }}>
             СОХРАНИТЬ
           </button>
         </form>
