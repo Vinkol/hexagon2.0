@@ -90,6 +90,7 @@ html {
   transition: all 0.2s;
   font-family: inherit;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .btn-start:hover {
