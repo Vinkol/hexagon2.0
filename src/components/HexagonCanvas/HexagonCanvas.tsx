@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import type { Wall, ColorScheme, Particle } from '../types';
+import type { Wall, ColorScheme, Particle } from '../../types';
 
 interface Props {
   onGameOver: (score: string) => void;
@@ -101,9 +101,9 @@ const HexagonCanvas: React.FC<Props> = ({ onGameOver, updateScore }) => {
           s.lastDirectionChange = Date.now();
         }
 
-        // Управление (увеличил скорость до 0.12, чтобы легче "бороться" с вращением)
-        if (s.keys['KeyA'] || s.keys['ArrowLeft']) s.playerAngle -= 0.12;
-        if (s.keys['KeyD'] || s.keys['ArrowRight']) s.playerAngle += 0.12;
+        // Управление (увеличил скорость до 0.06, чтобы легче "бороться" с вращением)
+        if (s.keys['KeyA'] || s.keys['ArrowLeft']) s.playerAngle -= 0.06;
+        if (s.keys['KeyD'] || s.keys['ArrowRight']) s.playerAngle += 0.06;
 
         s.currentRotationSpeed += (s.targetRotationSpeed - s.currentRotationSpeed) * 0.05;
         s.worldRotation += s.currentRotationSpeed;
@@ -144,7 +144,7 @@ const HexagonCanvas: React.FC<Props> = ({ onGameOver, updateScore }) => {
         if (s.isAlive) w.dist -= 5 + elapsed / 15;
 
         const rInner = Math.max(0, w.dist);
-        const rOuter = rInner + 20;
+        const rOuter = rInner + 22;
         const sectors = 6;
         const angleStep = (Math.PI * 2) / sectors;
         const numSegments = Math.round(w.width / angleStep);
